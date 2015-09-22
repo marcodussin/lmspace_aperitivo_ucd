@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Lean UX</title>
+
+		<meta name="description" content="Aperitivo LM Space">
+		<meta name="author" content="Ing. Marco Dussin">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<style>
+			.reveal h1, .reveal a, .rosso{
+				color: #d03238;
+			}
+			.reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+				color: #5a6879
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<iframe class="stretch" src="https://scratch.mit.edu/projects/embed/63624850/">
+					</iframe>
+				</section>
+
+				<section>
+					<img data-src="resources/lmspace_logo.jpg" style="border:none">
+					<h1>La progettazione centrata sull'utente</h1>
+					<h4>LM Space - Cittadella (PD)</h4>
+					<h4>22 Settembre 2015</h4>
+					<a href="http://marcodussin.github.io/lmspace_aperitivo_ucd/">http://marcodussin.github.io/lmspace_aperitivo_ucd/</a>
+					<h4>
+						<small><a href="http://marco.duss.in">Ing. Marco Dussin</a> / <a href="http://twitter.com/marcodussin">@MarcoDussin</a></small>
+					</h4>
+				</section>
+
+				<section>
+					<h2>Qualcosa su di me</h2>
+					<img data-src="resources/marco.jpg"/>
+					<p>Front and back end engineer, UX consultant</p>
+					<p><i class="fa fa-comments"></i> http://www.duss.in</p>
+					<p><i class="fa fa-envelope"></i> marco@duss.in</p>
+					<p><i class="fa fa-twitter-square"></i> @marcodussin</p>
+					<p><i class="fa fa-linkedin-square"></i> it.linkedin.com/in/marcodussin/</p>
+				</section>
+
+				<section>
+					<h1>Menu del giorno</h1>
+					<h2 class="fragment">Ergonomia</h2>
+					<h2 class="fragment">Ergonomia cognitiva</h2>
+					<h2 class="fragment">Sistemi interattivi e teoria degli errori</h2>
+					<h2 class="fragment">Lean UX</h2>
+				</section>
+
+
+				<section>
+
+					<section>
+						<img class="stretch" data-src="resources/BeautifulUsers_RGB_hires.jpg"/>
+					</section>
+
+
+					<section>
+						<img class="stretch" data-src="resources/model302.jpg"/>
+						<h4>Henry Dreyfuss, Model 302 Telephone, 1937</h4>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/model500.jpg"/>
+						<h4>Henry Dreyfuss, Model 500 Telephone, 1953</h4>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/princess_phone.jpg"/>
+						<h4>Henry Dreyfuss, Princess Telephone, 1959</h4>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h1>Ergonomia</h1>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/dreyfuss-joe.jpg"/>
+						<h4>Henry Dreyfuss, The measure of man</h4>
+					</section>
+
+					<section>
+						<p class="fragment">Il termine "Ergonomia" è stato usato per la prima volta da Wojciech Jastrzębowski in un giornale polacco nel 1857</p>
+						<br>
+						<h3>Ergonomia: dal greco <i>érgon</i> (lavoro) e <i>ńomos</i> (regola, legge)</h3>
+						<br>
+						<p class="fragment">Nel 1949 lo psicologo K. F. H. Murrell diede al termine il significato attuale:</p>
+					</section>
+
+					<section>
+						<blockquote>...è quella scienza che si occupa dell'interazione tra gli elementi di un sistema (umani e d'altro tipo) e la funzione per cui vengono progettati (nonché la teoria, i principi, i dati e i metodi che vengono applicati nella progettazione), allo scopo di migliorare la soddisfazione dell'utente e l'insieme delle prestazioni del sistema </blockquote>
+						<small class="rosso">I.E.A. (International Ergonomics Association)</small>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/chicago.jpg"/>
+						<blockquote>Science Finds, Industry Applies, Man Conforms (La scienza scopre. L'industria applica. L'uomo si adegua)</blockquote>
+						<small class="rosso">Motto della Chicago World's Fair del 1933</small>
+					</section>
+
+				</section>
+
+
+				<section>
+
+					<section>
+						<h1>Ergonomia</h1><h2>cognitiva</h2>
+					</section>
+
+					<section>
+						<blockquote>
+							L'ergonomia cognitiva ha come oggetto di studio l'interazione tra il sistema cognitivo
+							umano e gli strumenti per l'elaborazione di informazione. La conoscenza prodotta da
+							questo studio è utilizzata per supportare la progettazione di strumenti appropriati per i
+							più svariati usi, dal lavoro, all'educazione, al divertimento
+						</blockquote>
+						<small class="rosso">Società Europea di Ergonomia Cognitiva</small>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/93592ca.jpeg"/>
+						<p>Donald Norman: La caffettiera del masochista. Psicopatologia degli oggetti quotidiani, Giunti, 1988</p>
+					</section>
+
+					<section>
+						<p>I principi che un buon design dovrebbe seguire sono:</p>
+						<ul>
+							<li>fornire visibilità;
+							<li>fornire un buon mapping;
+							<li>fornire inviti e vincoli all'uso;
+							<li>fornire feedback;
+							<li>fornire consistenza;
+							<li>fornire un buon modello concettuale.
+						</ul>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h3>Fornire</h3><h2>visibilità</h2>
+						<img class="stretch" data-src="resources/fantozzi.jpg"/>
+						<p>
+							Esercizio: "la mia automobile"
+						</p>
+					</section>
+
+					<section>
+						<h3>Fornire visibilità (1)</h3>
+						<p>
+							Tutte le parti funzionali devono essere visibili e devono fornire il messaggio corretto su quello che si può fare
+						</p>
+					</section>
+
+					<section>
+						<h3>Fornire visibilità (2)</h3>
+						<p>
+							Le relazioni tra ciò che vogliamo fare e le parti dell'oggetto su cui agire devono essere evidenti.
+						</p>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/rubinetti.jpg"/>
+						<small>Rubinetti Treemme "Philo"</small>
+					</section>
+
+
+					<section>
+						<h3>Fornire visibilità (3)</h3>
+						<p>
+							Il numero delle funzioni disponibili non deve superare eccessivamente il numero dei comandi utilizzabili
+						</p>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/Google%202013-10-14%2002-18-32.png"/>
+						<small>Homepage di Google.it</small>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h3>Fornire un buon</h3><h2>mapping</h2>
+						<img class="stretch" data-src="resources/sdc10068.jpg"/>
+						<p>
+							Esercizio: "i miei fornelli"
+						</p>
+					</section>
+
+					<section>
+						<h3>Fornire un buon mapping (1)</h3>
+						<p>
+							Mapping significa correlazione tra la configurazione dei comandi disponibili per un dato oggetto
+							e la configurazione delle parti di tale oggetto in cui si manifestano i risultati prodotti
+						</p>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/switch-h.jpg"/>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/yswyv.jpg"/>
+					</section>
+
+					<section>
+						<h3>Fornire un buon mapping (2)</h3>
+						<p>
+							...senza obbligare l'utente a sforzi mnemonici o a procedere "per tentativi"
+						</p>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/ag_08e320_pwrseat.jpg"/>
+						<p><small>Powerseat di una Mercedes-Benz E320 BLUETEC del 2008</small></p>
+					</section>
+
+					<section>
+						<h3>Fornire un buon mapping (3)</h3>
+						<p>
+							Bisogna prestare particolare attenzione ai modelli culturali consolidati degli utenti
+						</p>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/3683133183_d385edc877.jpg"/>
+					</section>
+
+
+				</section>
+
+				<section>
+					<section>
+						<h3>Fornire</h3><h2>inviti e vincoli all’uso</h2>
+						<img class="stretch" data-src="resources/4870920248_479e8a2a4e.jpg"/>
+						<p>
+							Esercizio: "la mia porta"
+						</p>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/classic.jpg"/>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/Comcast.jpg"/>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/IMG_0981.JPG"/>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/mri.jpg"/>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/330.jpg"/>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/doors.png"/>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/CognitiveAffordance.jpg"/>
+					</section>
+
+					<section>
+						<h3>Fornire inviti e vincoli all’uso (1)</h3>
+						<ul>
+							<li>
+								Inviti (affordance): sono proprietà concrete e reali dell'oggetto che invitano l'utente
+								ad utilizzarlo in un certo modo
+							</li>
+							<li>
+								Vincoli (constraints): sono proprietà concrete o funzionalità progettate in modo tale da
+								vincolare l'utente ad un dato uso dell'oggetto
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/forbice_kinesiology_taping_k-active.jpg"/>
+						<p><small>Forbice Professionale K-Active Taping</small></p>
+					</section>
+
+					<section>
+						<h3>Fornire inviti e vincoli all’uso (2)</h3>
+						<p>Vincoli e inviti possono essere fisici, semantici, culturali o logici</p>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/Il_telefono_Bigrigio.JPG"/>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h3>Fornire</h3><h2>feedback</h2>
+						<img class="stretch" data-src="resources/lampadina-bruciata.jpg"/>
+						<p>Esercizio: "il mio interruttore della luce"</p>
+					</section>
+
+					<section>
+						<h3>Fornire feedback (1)</h3>
+						<p class="fragment">
+							Pemettere all'utente di capire immediatamente, in modo sincronizzato, quale conseguenza ha seguito la sua azione,
+							perchè possa verificare se è stata effettuata secondo le sue aspettative.
+						</p>
+						<p class="fragment">
+							Se l'azione non può essere percepita, sono buoni sostituti a tale percezione i suoni, i colori, i cambiamenti di forma
+							negli oggetti...
+						</p>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/ascensore.png"/>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h3>Fornire</h3><h2>consistenza</h2>
+						<img class="stretch" data-src="resources/5-cards.png"/>
+						<p>Esercizio: "le carte da gioco"</p>
+					</section>
+
+					<section>
+						<h3>Fornire consistenza (1)</h3>
+						<p class="fragment">
+							Progettare interfacce affinchè permettano simili operazioni ed utilizzino comandi simili
+							per compiere compiti simili.
+						</p>
+						<p class="fragment">
+							Permette all'utente di trasferire velocemente la conoscenza già acquisita a nuovi contesti e concentrarsi
+							quindi sulle operazioni di rilievo.
+						</p>
+						<p class="fragment">
+							Può essere controproducente.
+						</p>
+					</section>
+
+					<section>
+						<h3>Fornire consistenza (2)</h3>
+						<p>Ci sono 4 tipi di consistenza:</p>
+						<ol>
+							<li class="fragment">
+								estetica (es: riconoscere una "Mercedes" da una "BMW")
+							</li>
+							<li class="fragment">
+								funzionale (es: i colori del semaforo)
+							</li>
+							<li class="fragment">
+								interna (es: le segnalazioni dei sentieri di montagna)
+							</li>
+							<li class="fragment">
+								esterna (es: le interfacce dei programmi per un dato sistema operativo)
+							</li>
+						</ol>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Fornire un buon</h3><h2>modello concettuale</h2>
+						<img class="stretch" data-src="resources/a55e9fa842c2348c4988965d043e6836.jpg"/>
+						<p>Esercizio: "il mio termostato"</p>
+
+					</section>
+
+					<section>
+						<h3>Fornire un buon modello concettuale (1)</h3>
+						<p>
+							Interagendo con un sistema (software o di altro tipo), una persona si costruisce nella testa
+							un concetto mentale di che cosa il sistema e i suoi componenti siano,
+							che proprietà abbiano e quali siano le interazioni possibili con essi. E' quindi la struttura
+							delle convinzioni che una persona ha rispetto al modo in cui funziona una certa cosa.
+						</p>
+					</section>
+
+					<section>
+						<h3>La differenza tra una cosa <span class="rosso">complessa</span> ed una <b class="rosso">confusa</b> sta nel</h3>
+						<h3>modello concettuale del suo funzionamento</h3>
+						<h3>possieduto da chi la usa</h3>
+					</section>
+
+					<section>
+						<blockquote>
+							La complessità totale di un sistema è costante: se si semplifica l'interazione per la persona
+							aumenta la complessità dietro alle quinte.
+						</blockquote>
+						<small class="rosso">Larry Tesler (Apple) - Legge di Tesler della conservazione della complessità</small>
+					</section>
+
+				</section>
+
+				<section>
+					<h3>I principi che un buon design dovrebbe seguire sono:</h3>
+					<ul>
+						<li>fornire visibilità;
+						<li>fornire un buon mapping;
+						<li>fornire inviti e vincoli all'uso;
+						<li>fornire feedback;
+						<li>fornire consistenza;
+						<li>fornire un buon modello concettuale.
+					</ul>
+				</section>
+
+
+				<section>
+					<section>
+						<h1>Sistemi</h1>
+						<h2>Interattivi</h2>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="/resources/usercenteredbook.jpg">
+
+					</section>
+
+						<section>
+							<h3>Modelli di interazione (1)</h3>
+							<p>Donald Norman stabilisce <i>7 stadi dell'azione</i>:</p>
+							<ol>
+								<li class="fragment">L'utente stabilisce lo <i>scopo</i></li>
+								<li class="fragment">L'utente formula l'<i>intenzione</i></li>
+								<li class="fragment">L'utente <i>specifica</i> le azioni da compiere tramite l'interfaccia</li>
+								<li class="fragment">Il sistema <i>esegue</i> l'azione</li>
+								<li class="fragment">L'utente <i>percepisce</i> lo stato del sistema</li>
+								<li class="fragment">L'utente <i>interpreta</i> lo stato del sistema</li>
+								<li class="fragment">L'utente <i>valuta</i> lo stato del sistema rispetto allo scopo</li>
+							</ol>
+							<p class="fragment">Esecuzione e valutazione sono in un loop continuo</p>
+						</section>
+
+						<section>
+							<h3>Modelli di interazione (2)</h3>
+							<p>Secondo Norman alcuni sistemi sono più difficili da usare di altri perchè ci si trova ad annaspare nell'attraversare:</p>
+							<ul>
+								<li class="fragment">
+									il <b class="rosso">golfo dell'esecuzione</b>: quando la formulazione delle azioni da parte dell'utente non
+									coincide con le azioni permesse dal sistema
+								</li>
+								<li class="fragment">
+									il <b class="rosso">golfo della valutazione</b>: quando le aspettative di cambiamento sullo stato del sistema da
+									parte dell'utente sono diverse dallo stato raggiunto dal sistema stesso
+								</li>
+							</ul>
+						</section>
+
+						<section>
+							<h3>Modelli di interazione (3)</h3>
+							<img class="stretch" data-src="resources/image004.gif"/>
+						</section>
+
+						<section>
+							<h3>Modelli di interazione (4)</h3>
+							<p>Gli psicologi, come James Reason, che hanno tenuto dei cosiddetti "diari cognitivi" di ogni proprio errore, anche il più banale, hanno messo in evidenza come commettiamo errori sistematicamente e quotidianamente.</p>
+						</section>
+
+						<section>
+							<h3>Modelli di interazione (5)</h3>
+							<img class="stretch" data-src="resources/cheese.gif"/>
+							<small>James Reason: modello <i>del formaggio svizzero</i></small>
+						</section>
+
+						<section>
+							<h3>Modelli di interazione (6)</h3>
+							<img class="stretch" data-src="resources/cheese2.gif"/>
+							<small>James Reason: modello <i>del formaggio svizzero</i></small>
+						</section>
+
+
+
+						<section>
+							<h3>Modelli di interazione (7)</h3>
+							<p class="fragment">Possiamo distinguere tra due tipi di errore:</p>
+							<ul>
+								<li class="fragment">
+									<b class="rosso">SLIP:</b><br>l'utente ha capito correttamente il sistema e il suo scopo, ha formulato correttamente
+									l'azione ma ha compiuto poi una azione sbagliata (oppure la ha omessa, nel qual caso si usa anche il termine <b>LAPSE</b>).
+									Sono errori di esecuzione di una azione corretta.
+								</li>
+								<li class="fragment"><b class="rosso">MISTAKE:</b><br>l'utente e il sistema non riescono ad avere lo stesso scopo.
+									Sono gli errori dovuti ad una azione non appropriata, anche se potenzialmente corretta.
+								</li>
+							</ul>
+						</section>
+
+
+						<section>
+							<img class="stretch" data-src="resources/costa-concordia.jpg">
+						</section>
+
+						<section>
+							<blockquote>
+								"Slips result from automatic behavior... Mistakes result from conscious deliberations" [D. Norman]
+							</blockquote>
+							<p>
+								Gli slip sono errori di esecuzione, mentre i mistake sono errori di pianificazione.
+								Lo slip può essere risolto con un migliore design dell'interfaccia, il mistake con una migliore
+								comprensione del sistema.
+							</p>
+						</section>
+
+						<section>
+							<img class="stretch" data-src="resources/slide-55-638.jpg">
+						</section>
+
+						<section>
+							<p class="fragment"><b>Capture Slip:</b> andare al lavoro di sabato anzichè a casa</p>
+							<p class="fragment"><b>Omission Slip:</b> non spedire una mail lasciata in sospeso</p>
+							<p class="fragment"><b>Loss of Activation Slip:</b> scendere in garage e non ricordare perchè</p>
+							<p class="fragment"><b>Description Slip:</b> strisciare la carta di credito nella porta dell'albergo anzichè la chiave</p>
+						</section>
+						<section>
+							<p class="fragment"><b>Associative Activation Slip:</b> cercare di fare lo zoom con due dita sul vecchio tom tom</p>
+							<p class="fragment"><b>Perceptual Confusion Slip:</b> lavarsi le mani con il gel per capelli</p>
+							<p class="fragment"><b>Reverse Schema Slip:</b> buttare il portafoglio e tenere lo scontrino</p>
+							<p class="fragment"><b>Cross-talk Slip:</b> iniziare un documento in inglese e finirlo in italiano</p>
+						</section>
+
+						<section>
+							<img class="stretch" data-src="resources/John_Davidson.jpg">
+						</section>
+
+				</section>
+
+
+				<section>
+					<section>
+						<h1>Lean</h1>
+						<h2>UX</h2>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/lean-ux.gif">
+					</section>
+
+					<section>
+						<h1>11,6 secondi</h1>
+						<p>(Jon Jenkins, Velocity 2011, https://youtu.be/dxk8b9rSKOo)</p>
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/toyotabook.jpg">
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/leanstartupbook.jpg">
+					</section>
+
+					<section>
+						<p>NON costruiamo oggetti che la gente NON vuole</p>
+						<img class="stretch" data-src="resources/hereyougograndma.png">
+					</section>
+
+					<section>
+						<img class="stretch" data-src="resources/Build-Meaure-Learn.png">
+					</section>
+
+					<section>
+						<h2>Il processo di Lean UX</h2>
+						<img class="stretch" data-src="resources/leanuxprocess.png">
+					</section>
+
+					<section>
+						<h2>Lo scopo è far muovere in un percorso parallelo lo sviluppo e il design</h2>
+					</section>
+
+					<section>
+						<p>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/szr0ezLyQHY" frameborder="0" allowfullscreen></iframe>
+						</p>
+						<small>Nordstrom Innovation Lab: Sunglass iPad App Case Study</small>
+					</section>
+
+
+					<section>
+						<h2>In sintesi:</h2>
+						<ul>
+							<li class="fragment">team piccoli e multifunzionali</li>
+							<li class="fragment">designers + biz + developers + ... = 1 team</li>
+							<li class="fragment">la ricerca presso gli utenti è la miglior fonte di informazione</li>
+							<li class="fragment">concentrarsi nel risolvere il problema "giusto"</li>
+							<li class="fragment">generare molte opzioni e decidere velocemente quale perseguire</li>
+							<li class="fragment">riconoscere le ipotesi e validarle</li>
+						</ul>
+
+					</section>
+
+				</section>
+
+				<section>
+					<h1>THE END</h1>
+					<p>http://marcodussin.github.io/seminario_lean_ux_ordine_vicenza</p>
+					<img class="stretch" src="resources/happiness.jpg">
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
